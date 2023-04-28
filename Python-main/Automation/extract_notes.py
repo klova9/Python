@@ -9,4 +9,4 @@ Service = Service(executable_path=path)
 driver = webdriver.Firefox()
 
 visits = driver.find_element(
-    By.CSS_SELECTOR, "#schedule").click()
+    By.CSS_SELECTOR, "li.shortcut:nth-child(1) > a:nth-child(1) > span:nth-child(2)").click()
