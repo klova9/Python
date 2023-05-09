@@ -6,10 +6,10 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 firefox_binary = FirefoxBinary()
 options = Options()
-user_name = "ort"
-pass_word = "bopfez-5qytcI-fyqmuk"
+user_name = ""
+pass_word = ""
 path = "/Python/geckodriver"
-website = "https://mychart.uihealthcare.org/mychart/Authentication/Login?"
+website = ""
 
 Service = Service(executable_path=path)
 driver = webdriver.Firefox()
