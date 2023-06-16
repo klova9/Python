@@ -2,10 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.by import By
 
-user_name = "ort"
-pass_word = "bopfez-5qytcI-fyqmuk"
+user_name = username
+pass_word = password
 path = "/Python/geckodriver"
-website = "https://mychart.uihealthcare.org/mychart/Authentication/Login?"
+website = website
 
 Service = Service(executable_path=path)
 driver = webdriver.Firefox()

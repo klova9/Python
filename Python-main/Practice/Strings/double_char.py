@@ -4,7 +4,6 @@ def double_char(word):
     double_word = ''
     for char in word:
         double_word += char*2
-        return double_word
     print(double_word)    
 
 double_char('The')# → 'TThhee'
