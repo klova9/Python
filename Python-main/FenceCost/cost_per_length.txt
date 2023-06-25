@@ -1,0 +1,6 @@
+| cost       | Product                   | Length Per Unit   | Cost Per Unit   | Total Units   | Total Cost   |
+|------------|---------------------------|-------------------|-----------------|---------------|--------------|
+| Costco     | Weathered Boat Dock HDPC  | 15.22             | 42.99           | 5             | Costco       |
+| Menards    | Gaitwood Timber Pine      | 18.00             | 17.79           | 4             | Menards      |
+| Home Depot | Espresso Peel and Stick   | 15.00             | 21.22           | 5             | Home Depot   |
+| Lowes      | Barley Oak Peel and Stick | 1.50              | 1.28            | 43            | Lowes        |

@@ -1,12 +1,11 @@
 from selenium import webdriver
-from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
 import pandas as pd
-
 website = "https://www.thesun.co.uk/sport/football/"
 path = "/Python/geckodriver"
 
-Service = Service(executable_path=path)
-driver = webdriver.Firefox
+driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 driver.get(website)
 
 containers = driver.find_elements(

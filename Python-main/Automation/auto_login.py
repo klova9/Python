@@ -1,11 +1,13 @@
 from selenium import webdriver
+import auto_login_credentials
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.by import By
+# This code uses the Selenium library to automate logging in to a website. It retrieves login credentials from a separate file, navigates to the website, inputs the username and password, and clicks the submit button.
 
-user_name = username
-pass_word = password
+user_name = auto_login_credentials.username
+pass_word = auto_login_credentials.password
 path = "/Python/geckodriver"
-website = website
+website = auto_login_credentials.website
 
 Service = Service(executable_path=path)
 driver = webdriver.Firefox()
