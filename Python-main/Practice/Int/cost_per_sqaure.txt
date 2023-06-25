@@ -1,6 +1,0 @@
-| Manufacturer   | Product                   | Type        | Area Per Unit   | Cost Per Unit   | Total Units   | Total Cost   |
-|----------------|---------------------------|-------------|-----------------|-----------------|---------------|--------------|
-| Costco         | Weathered Boat Dock HDPC  | Viynl Plank | 15.22           | 42.99           | 23            | 988.77       |
-| Menards        | Gaitwood Timber Pine      | Viynl Plank | 18.00           | 17.79           | 19            | 338.01       |
-| Home Depot     | Espresso Peel and Stick   | Viynl Plank | 15.00           | 21.22           | 23            | 488.06       |
-| Lowes          | Barley Oak Peel and Stick | Viynl Plank | 1.50            | 1.28            | 226           | 289.28       |
