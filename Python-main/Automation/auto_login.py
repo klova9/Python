@@ -1,8 +1,8 @@
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+import auto_login_credentials
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+# This code uses the Selenium library to automate logging in to a website. It retrieves login credentials from a separate file, navigates to the website, inputs the username and password, and clicks the submit button.
 
 firefox_binary = FirefoxBinary()
 options = Options()
@@ -26,13 +26,11 @@ username.send_keys(user_name)
 
 # Input Password
 elements = driver.find_elements(By.CSS_SELECTOR, "#Password")
-password=elements[0]
+password = elements[0]
 password.clear
 password.send_keys(pass_word)
 
-# Click Sumbit 
+# Click Sumbit
 elements = driver.find_elements(By.NAME, "submit")
 submit = elements[0]
 submit.click()
-
-
