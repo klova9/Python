@@ -37,8 +37,8 @@ class TicTacToe:
             return False
         
         if square % 2 == 0:
-            diaonal1 = [self.board[i] for i in [0, 4, 8]]
-            if all([spot == letter for spot in diaonal1]):
+            diagonal1 = [self.board[i] for i in [0, 4, 8]]
+            if all([spot == letter for spot in diagonal1]):
                 return True
             diagnol2 = [self.board[i] for i in [2, 4, 6]]
             if all([spot == letter for spot in diagnol2]):
