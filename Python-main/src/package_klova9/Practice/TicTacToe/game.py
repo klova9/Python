@@ -1,21 +1,29 @@
-class TicTacToe:
+
+import math
+import time
+from player import HumanPlayer, CPUPlayer, HardCPUPlayer
+
+
+class TicTacToe():
     def __init__(self):
-        self.board = [' ' for _ in range(9)]
+        self.board = self.make_board()
         self.current_winner = None
+
+    @staticmethod
+    def make_board():
+        return [' ' for _ in range(9)]
+
     def print_board(self):
-        for row in [self.board[i*3:(i+1)*3] for row in range(3)]:
+        for row in [self.board[i*3:(i+1) * 3] for i in range(3)]:
             print('| ' + ' | '.join(row) + ' |')
+
     @staticmethod
     def print_board_nums():
+        # 0 | 1 | 2
         number_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
         for row in number_board:
             print('| ' + ' | '.join(row) + ' |')
-    def available_moves(self):
-        return [i for i, spot in enumerate(self.board) if spot == ' ']
-    def empty_squares(self):
-        return ' ' in self.board
-    def num_empty_squares(self):
-        return len(self.available_moves())
+
     def make_move(self, square, letter):
         if self.board[square] == ' ':
             self.board[square] = letter
@@ -23,31 +31,45 @@ class TicTacToe:
                 self.current_winner = letter
             return True
         return False
-    
+
     def winner(self, square, letter):
-        
-        row_ind = square // 3
-        row = [self.board[row_ind*3 : (row_ind+1) * 3]]
-        if all([spot == letter for spot in row]):
+        # check the row
+        row_ind = math.floor(square / 3)
+        row = self.board[row_ind*3:(row_ind+1)*3]
+        # print('row', row)
+        if all([s == letter for s in row]):
             return True
-        
-        col_ind = square * 3
+        col_ind = square % 3
         column = [self.board[col_ind+i*3] for i in range(3)]
-        if all([spot == letter for spot in column]):
-            return False
-        
+        # print('col', column)
+        if all([s == letter for s in column]):
+            return True
         if square % 2 == 0:
             diagonal1 = [self.board[i] for i in [0, 4, 8]]
-            if all([spot == letter for spot in diagonal1]):
+            # print('diag1', diagonal1)
+            if all([s == letter for s in diagonal1]):
                 return True
-            diagnol2 = [self.board[i] for i in [2, 4, 6]]
-            if all([spot == letter for spot in diagnol2]):
+            diagonal2 = [self.board[i] for i in [2, 4, 6]]
+            # print('diag2', diagonal2)
+            if all([s == letter for s in diagonal2]):
                 return True
         return False
-        
-def play(game, x_player, y_player, print_game=True):
+
+    def empty_squares(self):
+        return ' ' in self.board
+
+    def num_empty_squares(self):
+        return self.board.count(' ')
+
+    def available_moves(self):
+        return [i for i, x in enumerate(self.board) if x == " "]
+
+
+def play(game, x_player, o_player, print_game=True):
+
     if print_game:
         game.print_board_nums()
+
     letter = 'X'
     while game.empty_squares():
         if letter == 'O':
@@ -55,18 +77,59 @@ def play(game, x_player, y_player, print_game=True):
         else:
             square = x_player.get_move(game)
         if game.make_move(square, letter):
-            print(letter + f' makes a move to square {square}')
-        if game.current_winner:
+
             if print_game:
-                print(letter + ' Wins!')
-            return letter
-        letter = 'O' if letter == 'X' else 'X'
+                print(letter + ' makes a move to square {}'.format(square))
+                game.print_board()
+                print('')
+
+            if game.current_winner:
+                if print_game:
+                    print(letter + ' wins!')
+                return letter  # ends the loop and exits the game
+            letter = 'O' if letter == 'X' else 'X'  # switches player
+
+        time.sleep(.8)
+
     if print_game:
-        print("It's a Tie!")
+        print('It\'s a tie!')
+
+if __name__ == '__main__':
+    x_player = CPUPlayer('x')
+    o_player = HardCPUPlayer('o')
+    t = TicTacToe()
+    choice = input('Player vs CPU (0)\nCPU vs CPU (1)\n')
+    if choice == '0':
+        run = True
+        while run == True:
+            play(t, x_player, o_player, print_game=True)
+            i = input('Play again (y/n)?')
+            if i == 'n':
+                run == False
+                break
+            else:
+                t = TicTacToe()
     
-        row_ind = square // 3
-        row = self.board[row_ind*3:(row_ind+1)*3]
-        if all([spot == letter for spot in row]):
-            return True
-        col_ind = square % 3
-        column = [self.board[col_ind+i*3] for i in range(3)]
+    if choice == '1':
+        x_wins = 0
+        o_wins = 0
+        ties = 0
+        print('Running...')
+        for i in range(1000):
+            result = play(t, x_player, o_player, print_game=False)
+            if result == 'X':
+                x_wins += 1
+            elif result == 'O':
+                o_wins += 1
+            else:
+                ties += 1
+        print(f'X wins: {x_wins}\nO wins: {o_wins}\nTies: {ties}')
+    '''run = True
+    while run == True:
+        play(t, x_player, o_player, print_game=True)
+        i = input('Play again (y/n)?')
+        if i == 'n':
+            run == False
+            break
+        else:
+            t = TicTacToe()'''
