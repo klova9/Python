@@ -1,5 +1,7 @@
 from tkinter import *
 import random
+import main
+from PIL import Image, ImageTk
 import settings
 
 class Cell:
@@ -12,8 +14,12 @@ class Cell:
         Cell.all.append(self)
         
     def create_cell_button(self, location):
+        img = Image.open('Python-main\src\package_klova9\Practice\Minesweeper\grass.png')
+        canvas = Canvas(main.root, width = 1, height = 1)
+        ph = ImageTk.PhotoImage(master = canvas, image = img)
         btn = Button(
         location,
+        image=ph,
         relief='raised',
         borderwidth=4,
         text = f'{self.x}, {self.y}',
