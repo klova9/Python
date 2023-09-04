@@ -1,5 +1,5 @@
 import csv
-# This code defines a function called read_employees that takes a parameter called csv_file_location. The function opens a CSV file located at csv_file_location and reads its data using the csv.DictReader method. It then appends each row of data to a list called employee_list and returns this list.
+# This code defines a function called read_employees that takes a parameter called csv_file_location. The function opens a CSV file located at csv_file_location and reads its data using the csv.DictReader method. It then appends each row of data to a list called employee_list aPnd returns this list.
 
 def read_employees(csv_file_location):
     with open(csv_file_location, mode='r') as f:
