@@ -1,4 +1,4 @@
 HEIGHT = 345
 WIDTH = 400
 GRID_SIZE = 6
-MINE_COUNT = int(round((GRID_SIZE ** 2) / 4, 0))
+MINES_COUNT = int(round((GRID_SIZE ** 2) / 4, 0))
