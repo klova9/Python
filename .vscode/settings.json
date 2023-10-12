@@ -14,5 +14,6 @@
     "python.testing.unittestEnabled": true,
     "python.analysis.extraPaths": [
         "./Python-main/src/package_klova9/Practice/Int"
-    ]
+    ],
+    "gitdoc.enabled": true
 }

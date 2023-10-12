@@ -1,10 +1,11 @@
-from tkinter import Button
+from tkinter import *
 import random
 import settings
 
 
 class Cell:
     all = []
+    cell_count_label = None
     def __init__(self,x, y, is_mine=False):
         self.is_mine = is_mine
         self.cell_btn_object = None
@@ -13,23 +14,42 @@ class Cell:
 
         # Append the object to the Cell.all list
         Cell.all.append(self)
-
+    
     def create_btn_object(self, location):
         btn = Button(
             location,
-            width=12,
-            height=4,
+            width=6,
+            height=2,
+            relief='raised',
+            borderwidth=8
         )
         btn.bind('<Button-1>', self.left_click_actions ) # Left Click
         btn.bind('<Button-3>', self.right_click_actions ) # Right Click
         self.cell_btn_object = btn
+        
+           
+    
+    @staticmethod
+    def create_cell_count_label(location):
+        label = Label(
+            location,
+            text=f'Tiles left:  {settings.CELL_COUNT}'
+        )
+        Cell.cell_count_label = label
 
     def left_click_actions(self, event):
         if self.is_mine:
             self.show_mine()
         else:
+            if self.surrounded_cells_mines_length == 0:
+               for cell_obj in self.surrounded_cells:
+                   cell_obj.show_cell() 
             self.show_cell()
-
+        self.cell_btn_object.config(relief='sunken')
+        return 'break'
+            
+        
+            
     def get_cell_by_axis(self, x,y):
         # Return a cell object based on the value of x,y
         for cell in Cell.all:
@@ -62,7 +82,10 @@ class Cell:
         return counter
 
     def show_cell(self):
-        self.cell_btn_object.configure(text=self.surrounded_cells_mines_length)
+        self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 8 bold', relief='sunken')
+        return 'break'
+        
+        
 
     def show_mine(self):
         # A logic to interrupt the game and display a message that player lost!
@@ -80,7 +103,6 @@ class Cell:
         )
         for picked_cell in picked_cells:
             picked_cell.is_mine = True
-            print(f'Mine at {picked_cell}')
 
     def __repr__(self):
         return f"Cell({self.x}, {self.y})"
