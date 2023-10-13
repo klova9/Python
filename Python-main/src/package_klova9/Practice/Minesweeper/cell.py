@@ -75,10 +75,20 @@ class Cell:
     @property
     def surrounded_cells_mines_length(self):
         counter = 0
+        i = {
+            0: 'green',
+            1: 'blue',
+            2: 'yellow',
+            3: 'orange',
+            4: 'red',
+            5: 'brown'
+        }
         for cell in self.surrounded_cells:
             if cell.is_mine:
                 counter += 1
-
+        for k, v in i.items():
+            if k == counter:
+                self.cell_btn_object.configure()
         return counter
 
     def show_cell(self):
