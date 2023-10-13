@@ -33,7 +33,7 @@ class Cell:
     def create_cell_count_label(location):
         label = Label(
             location,
-            text=f'Tiles left:  {settings.CELL_COUNT}', font='smallfonts20',
+            text=f'Tiles left:  {settings.CELL_COUNT}', font='gostcom 20 bold',
             width=12,
             height=4,
             bg='black',
