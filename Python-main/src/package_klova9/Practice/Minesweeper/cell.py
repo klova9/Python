@@ -88,7 +88,7 @@ class Cell:
                 counter += 1
         for k, v in i.items():
             if k == counter:
-                self.cell_btn_object.configure()
+                self.cell_btn_object.configure(fg=v)
         return counter
 
     def show_cell(self):
