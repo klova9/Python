@@ -1,8 +1,9 @@
 from tkinter import *
 import random
 import settings
+import os
 
-
+os.path()
 class Cell:
     all = []
     cell_count_label = None
