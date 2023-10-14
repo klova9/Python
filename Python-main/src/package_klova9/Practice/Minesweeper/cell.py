@@ -10,6 +10,7 @@ class Cell:
     print(f'Cell count: {cell_count}')
     def __init__(self,x, y, is_mine=False):
         self.is_mine = is_mine
+        self.is_open = False
         self.cell_btn_object = None
         self.x = x
         self.y = y
@@ -99,11 +100,12 @@ class Cell:
         return counter
 
     def show_cell(self):
-        Cell.cell_count -= 1
-        self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 8 bold', relief='sunken')
-        if Cell.cell_count_label:
-            Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count - settings.MINES_COUNT}')
-        
+        if not self.is_open:
+            Cell.cell_count -= 1
+            self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 8 bold', relief='sunken')
+            if Cell.cell_count_label:
+                Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count - settings.MINES_COUNT}')
+        self.is_open = True
     def show_mine(self):
         # A logic to interrupt the game and display a message that player lost!
         self.cell_btn_object.configure(bg='red')
