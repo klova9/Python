@@ -23,6 +23,7 @@ class Cell:
             location,
             width=6,
             height=2,
+            []=]
             relief='raised',
             borderwidth=8
         )
