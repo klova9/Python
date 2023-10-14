@@ -1,9 +1,8 @@
 from tkinter import *
 import random
 import settings
-import os
 
-img = os.path('D:\Python\Python-main\src\package_klova9\Practice\Minesweeper\Flag-icon.png')
+
 class Cell:
     all = []
     cell_count_label = None
