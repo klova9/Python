@@ -40,6 +40,14 @@ class Cell:
             bg='black',
             fg='red'
         )
+        label2 = Label(
+            location,
+            text=f'Mines left:  {settings.MINES_COUNT}', font='gostcom 16 bold',
+            width=12,
+            height=4,
+            bg='black',
+            fg='red'
+        )
         Cell.cell_count_label = label
 
     def left_click_actions(self, event):
@@ -100,7 +108,7 @@ class Cell:
         Cell.cell_count -= 1
         self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 8 bold', relief='sunken')
         if Cell.cell_count_label:
-            Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count}')
+            Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count - settings.MINES_COUNT}')
         
     def show_mine(self):
         # A logic to interrupt the game and display a message that player lost!
