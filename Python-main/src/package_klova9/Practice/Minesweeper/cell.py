@@ -40,16 +40,8 @@ class Cell:
             bg='black',
             fg='red'
         )
-        label2 = Label(
-            location,
-            text=f'Mines left:  {settings.MINES_COUNT}', font='gostcom 16 bold',
-            width=12,
-            height=4,
-            bg='black',
-            fg='red'
-        )
+     
         Cell.cell_count_label = label
-        settings.MINES_COUNT = label2
 
     def left_click_actions(self, event):
         if self.is_mine:
