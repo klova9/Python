@@ -117,6 +117,7 @@ class Cell:
         picked_cells = random.sample(
             Cell.all, settings.MINES_COUNT
         )
+        print(settings.MINES_COUNT)
         for picked_cell in picked_cells:
             picked_cell.is_mine = True
 
