@@ -99,6 +99,8 @@ class Cell:
     def show_cell(self):
         Cell.cell_count -= 1
         self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 8 bold', relief='sunken')
+        if Cell.cell_count_label:
+            Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count}')
         return 'break'
         
         
