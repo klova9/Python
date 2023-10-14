@@ -49,6 +49,7 @@ class Cell:
             fg='red'
         )
         Cell.cell_count_label = label
+        settings.MINES_COUNT = label2
 
     def left_click_actions(self, event):
         if self.is_mine:
