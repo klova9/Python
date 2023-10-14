@@ -6,7 +6,6 @@ import settings
 class Cell:
     all = []
     cell_count_label = None
-    uncoverd_cells = 0
     def __init__(self,x, y, is_mine=False):
         self.is_mine = is_mine
         self.cell_btn_object = None
@@ -34,7 +33,7 @@ class Cell:
     def create_cell_count_label(location):
         label = Label(
             location,
-            text=f'Tiles left:  {settings.CELL_COUNT - Cell.uncoverd_cells}', font='gostcom 12 bold',
+            text=f'Tiles left:  {settings.CELL_COUNT}', font='gostcom 12 bold',
             width=12,
             height=4,
             bg='black',
@@ -98,7 +97,7 @@ class Cell:
 
     def show_cell(self):
         self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 8 bold', relief='sunken')
-        self.uncoverd_cells += 1
+        settings.CELL_COUNT -= 1
         return 'break'
         
         
