@@ -101,10 +101,7 @@ class Cell:
         self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 8 bold', relief='sunken')
         if Cell.cell_count_label:
             Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count}')
-        return 'break'
         
-        
-
     def show_mine(self):
         # A logic to interrupt the game and display a message that player lost!
         self.cell_btn_object.configure(bg='red')
