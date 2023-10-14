@@ -56,7 +56,8 @@ class Cell:
         self.cell_btn_object.config(relief='sunken')
         return 'break'
             
-        
+    def right_click_actions(self, event):
+        self.cell_btn_object.config(image='Python-main\src\package_klova9\Practice\Minesweeper\Flag-icon.png') 
             
     def get_cell_by_axis(self, x,y):
         # Return a cell object based on the value of x,y
@@ -109,11 +110,6 @@ class Cell:
     def show_mine(self):
         # A logic to interrupt the game and display a message that player lost!
         self.cell_btn_object.configure(bg='red')
-
-
-    def right_click_actions(self, event):
-        print(event)
-        print("I am right clicked!")
 
     @staticmethod
     def randomize_mines():
