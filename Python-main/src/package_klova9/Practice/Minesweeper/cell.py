@@ -7,6 +7,7 @@ class Cell:
     all = []
     cell_count_label = None
     cell_count = settings.CELL_COUNT
+    print(f'Cell count: {cell_count}')
     def __init__(self,x, y, is_mine=False):
         self.is_mine = is_mine
         self.cell_btn_object = None
