@@ -26,6 +26,7 @@ class Cell:
             relief='raised',
             borderwidth=8
         )
+        btn.grid(propagate=False)
         btn.bind('<Button-1>', self.left_click_actions ) # Left Click
         btn.bind('<Button-3>', self.right_click_actions ) # Right Click
         self.cell_btn_object = btn
