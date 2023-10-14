@@ -57,7 +57,7 @@ class Cell:
         return 'break'
             
     def right_click_actions(self, event):
-        self.cell_btn_object.config(image='Python-main\src\package_klova9\Practice\Minesweeper\Flag-icon.png') 
+        self.cell_btn_object.config(image='Flag-icon.png') 
             
     def get_cell_by_axis(self, x,y):
         # Return a cell object based on the value of x,y
