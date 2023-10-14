@@ -34,7 +34,7 @@ class Cell:
     def create_cell_count_label(location):
         label = Label(
             location,
-            text=f'Tiles left:  {Cell.cell_count}', font='gostcom 12 bold',
+            text=f'Tiles left:  {Cell.cell_count}', font='gostcom 16 bold',
             width=12,
             height=4,
             bg='black',
