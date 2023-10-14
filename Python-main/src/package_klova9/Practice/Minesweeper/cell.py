@@ -3,7 +3,7 @@ import random
 import settings
 import os
 
-img = os.path.dirname(os.getcwd() + '') 
+img = os.path.dirname(os.getcwd() + '\\Flag-icon.png') 
 class Cell:
     all = []
     cell_count_label = None
