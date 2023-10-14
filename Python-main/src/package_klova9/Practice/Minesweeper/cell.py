@@ -1,8 +1,9 @@
 from tkinter import *
 import random
 import settings
+import os
 
-
+img = os.path.dirname(os.getcwd() + '') 
 class Cell:
     all = []
     cell_count_label = None
