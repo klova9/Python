@@ -10,6 +10,7 @@ root.configure(bg="black")
 root.geometry(f'{settings.WIDTH}x{settings.HEIGHT}')
 root.title("Minesweeper Game")
 root.resizable(False, False)
+root.pack_propagate(False)
 
 top_frame = Frame(
     root,
