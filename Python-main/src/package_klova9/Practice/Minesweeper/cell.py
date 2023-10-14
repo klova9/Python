@@ -26,7 +26,7 @@ class Cell:
             relief='raised',
             borderwidth=8
         )
-        btn.grid(propagate=False)
+        btn.grid_propagate(False)
         btn.bind('<Button-1>', self.left_click_actions ) # Left Click
         btn.bind('<Button-3>', self.right_click_actions ) # Right Click
         self.cell_btn_object = btn
@@ -103,7 +103,7 @@ class Cell:
     def show_cell(self):
         if not self.is_open:
             Cell.cell_count -= 1
-            self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 8 bold', relief='sunken')
+            self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 12 bold', relief='sunken')
             if Cell.cell_count_label:
                 Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count - settings.MINES_COUNT}')
         self.is_open = True
