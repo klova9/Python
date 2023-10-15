@@ -4,7 +4,7 @@ import settings
 import ctypes
 import sys
 
-img1 = PhotoImage(file='Python-main/src/package_klova9/Practice/Minesweeper/Flag-icon.png')
+
 
 class Cell:
     all = []
