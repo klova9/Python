@@ -109,11 +109,12 @@ class Cell:
     def show_cell(self):
         if not self.is_open:
             Cell.cell_count -= 1
+            print(Cell.cell_count)
             self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 10', relief='sunken', bg='SystemButtonFace')
             if Cell.cell_count_label:
                 Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count - settings.MINES_COUNT}')
         self.is_open = True
-        if Cell.cell_count == 0:
+        if Cell.cell_count == settings.MINES_COUNT:
             ctypes.windll.user32.MessageBoxW(0, 'You won!', 'Game Over', 0)
             sys.exit()
         
