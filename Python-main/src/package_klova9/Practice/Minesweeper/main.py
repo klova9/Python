@@ -25,7 +25,7 @@ game_title = Label(
     text="Minesweeper",
     bg='black',
     fg='white',
-    font='gostcom 16 bold'
+    font='gostcom 24 bold'
 )
 game_title.place(x=utils.width_prct(25), y=0)
 left_frame = Frame(
