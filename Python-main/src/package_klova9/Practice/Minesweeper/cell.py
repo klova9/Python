@@ -4,8 +4,7 @@ import settings
 import ctypes
 import sys
 
-img1 = PhotoImage(file=')
-img2 = PhotoImage(file='minesweeper2.gif')
+img1 = PhotoImage(file='Python-main/src/package_klova9/Practice/Minesweeper/Flag-icon.png')
 
 class Cell:
     all = []
@@ -63,7 +62,7 @@ class Cell:
             
     def right_click_actions(self, event):
         if not self.isMarked and not  self.is_open:
-            self.cell_btn_object.config(bg='orange')
+            self.cell_btn_object.config(bg='orange', Image=img1)
             self.isMarked = True
         else:
             self.cell_btn_object.config(bg='SystemButtonFace')
@@ -113,7 +112,7 @@ class Cell:
         if not self.is_open:
             Cell.cell_count -= 1
             print(Cell.cell_count)
-            self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 10', relief='sunken', bg='SystemButtonFace',image=img1)
+            self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 10', relief='sunken', bg='SystemButtonFace')
             if Cell.cell_count_label:
                 Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count - settings.MINES_COUNT}')
         self.is_open = True
