@@ -2,7 +2,7 @@ from tkinter import *
 from cell import Cell
 import settings
 import utils
-
+from PIL import Image, ImageTk
 
 root = Tk()
 
@@ -11,7 +11,7 @@ root.geometry(f'{settings.WIDTH}x{settings.HEIGHT}')
 root.title("Minesweeper Game")
 root.resizable(False, False)
 root.pack_propagate(False)
-img1 = PhotoImage(file='D:\Python\Python-main\src\package_klova9\Practice\Minesweeper\main.py')
+img1 = Image.open('D:\Python\Python-main\src\package_klova9\Practice\Minesweeper\main.py')
 top_frame = Frame(
     root,
     bg='black',
