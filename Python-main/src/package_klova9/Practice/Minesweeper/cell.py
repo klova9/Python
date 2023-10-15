@@ -58,7 +58,7 @@ class Cell:
         return 'break'
             
     def right_click_actions(self, event):
-        if not self.isMarked and not self.show_cell:
+        if not self.isMarked and not  self.is_open:
             self.cell_btn_object.config(bg='orange')
             self.isMarked = True
         else:
@@ -108,7 +108,7 @@ class Cell:
     def show_cell(self):
         if not self.is_open:
             Cell.cell_count -= 1
-            self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 12 bold', relief='sunken')
+            self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 12 bold', relief='sunken', bg='SystemButtonFace')
             if Cell.cell_count_label:
                 Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count - settings.MINES_COUNT}')
         self.is_open = True
