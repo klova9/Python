@@ -4,6 +4,9 @@ import settings
 import ctypes
 import sys
 
+img1 = PhotoImage(file=')
+img2 = PhotoImage(file='minesweeper2.gif')
+
 class Cell:
     all = []
     cell_count_label = None
@@ -110,7 +113,7 @@ class Cell:
         if not self.is_open:
             Cell.cell_count -= 1
             print(Cell.cell_count)
-            self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 10', relief='sunken', bg='SystemButtonFace')
+            self.cell_btn_object.configure(text=self.surrounded_cells_mines_length, font='ComicSansMS 10', relief='sunken', bg='SystemButtonFace',image=img1)
             if Cell.cell_count_label:
                 Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count - settings.MINES_COUNT}')
         self.is_open = True
