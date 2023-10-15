@@ -1,7 +1,7 @@
 from tkinter import *
 import random
 import settings
-
+import ctypes
 
 class Cell:
     all = []
@@ -113,9 +113,8 @@ class Cell:
                 Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count - settings.MINES_COUNT}')
         self.is_open = True
     def show_mine(self):
-        # A logic to interrupt the game and display a message that player lost!
         self.cell_btn_object.configure(bg='red')
-
+        ctypes.windll.user32.MessageBoxW(0, 'You clicked on a mine', 'Game Over', 0)
     @staticmethod
     def randomize_mines():
         picked_cells = random.sample(
