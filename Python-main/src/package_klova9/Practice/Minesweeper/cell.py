@@ -1,9 +1,8 @@
 from tkinter import *
 import random
 import settings
-import os
 
-img = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'Flag-icon.png')
+
 class Cell:
     all = []
     cell_count_label = None
