@@ -61,6 +61,9 @@ class Cell:
         if not self.isMarked:
             self.cell_btn_object.config(bg='orange')
             self.isMarked = True
+        else:
+            self.cell_btn_object.config(bg='SystemButtonFace')
+            self.isMarked = False
     def get_cell_by_axis(self, x,y):
         # Return a cell object based on the value of x,y
         for cell in Cell.all:
