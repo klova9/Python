@@ -114,8 +114,8 @@ class Cell:
                 Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count - settings.MINES_COUNT}')
         self.is_open = True
         if Cell.cell_count == 0:
-            for cell in Cell.all:
-                cell.show_cell()6
+            ctypes.windll.user32.MessageBoxW(0, 'You won!', 'Game Over', 0)
+            sys.exit()
         
     def show_mine(self):
         self.cell_btn_object.configure(bg='red')
