@@ -58,7 +58,7 @@ class Cell:
         return 'break'
             
     def right_click_actions(self, event):
-        if not self.isMarked:
+        if not self.isMarked and not self.show_cell:
             self.cell_btn_object.config(bg='orange')
             self.isMarked = True
         else:
