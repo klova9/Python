@@ -12,6 +12,7 @@ class Cell:
         self.is_mine = is_mine
         self.is_open = False
         self.cell_btn_object = None
+        self.isMarked = False
         self.x = x
         self.y = y
 
@@ -57,8 +58,9 @@ class Cell:
         return 'break'
             
     def right_click_actions(self, event):
-        self.cell_btn_object.config(image=img) 
-            
+        if not self.isMarked:
+            self.cell_btn_object.config(bg='orange')
+            self.isMarked = True
     def get_cell_by_axis(self, x,y):
         # Return a cell object based on the value of x,y
         for cell in Cell.all:
