@@ -113,9 +113,9 @@ class Cell:
             if Cell.cell_count_label:
                 Cell.cell_count_label.configure(text=f'Tiles left:  {Cell.cell_count - settings.MINES_COUNT}')
         self.is_open = True
-        if self.surrounded_cells_mines_length == 0:
-            for cell_obj in self.surrounded_cells:
-                cell_obj.show_cell()
+        if Cell.cell_count == 0:
+            for cell in Cell.all:
+                cell.show_cell()6
         
     def show_mine(self):
         self.cell_btn_object.configure(bg='red')

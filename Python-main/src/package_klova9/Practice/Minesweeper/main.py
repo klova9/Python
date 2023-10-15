@@ -5,7 +5,7 @@ import utils
 
 
 root = Tk()
-# Override the settings of the window
+
 root.configure(bg="black")
 root.geometry(f'{settings.WIDTH}x{settings.HEIGHT}')
 root.title("Minesweeper Game")
