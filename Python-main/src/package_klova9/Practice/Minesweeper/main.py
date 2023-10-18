@@ -4,8 +4,7 @@ import settings
 import utils
 from PIL import Image, ImageTk
 
-path = 'D:\Python\Python-main\src\package_klova9\Practice\Minesweeper\Flag-icon.jpg'
-img1 = PhotoImage(file=path)
+
 root = Tk()
 
 root.configure(bg="black")
@@ -62,4 +61,5 @@ Cell.create_cell_count_label(left_frame)
 Cell.cell_count_label.place(x=0, y=0)
 Cell.randomize_mines()
 # Run the window
+
 root.mainloop()
