@@ -3,10 +3,7 @@ import random
 import settings
 import ctypes
 import sys
-from PIL import Image, ImageTk
 
-path = 'D:\Python\Python-main\src\package_klova9\Practice\Minesweeper\Flag-icon.jpg'
-img1 = PhotoImage(file=path)
 
 class Cell:
     all = []
