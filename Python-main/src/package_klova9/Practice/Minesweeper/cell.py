@@ -6,7 +6,7 @@ import sys
 from PIL import Image, ImageTk
 
 path = 'D:\Python\Python-main\src\package_klova9\Practice\Minesweeper\Flag-icon.jpg'
-img1 = Image.open(path)
+img1 = PhotoImage(file=path)
 
 class Cell:
     all = []
@@ -64,7 +64,7 @@ class Cell:
             
     def right_click_actions(self, event):
         if not self.isMarked and not  self.is_open:
-            self.cell_btn_object.config(bg='orange', Image=img1)
+            self.cell_btn_object.config(image=img1)
             self.isMarked = True
         else:
             self.cell_btn_object.config(bg='SystemButtonFace')
