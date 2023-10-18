@@ -2,7 +2,7 @@ from tkinter import *
 from cell import Cell
 import settings
 import utils
-from PIL import Image, ImageTk
+
 
 root = Tk()
 
@@ -11,8 +11,7 @@ root.geometry(f'{settings.WIDTH}x{settings.HEIGHT}')
 root.title("Minesweeper Game")
 root.resizable(False, False)
 root.pack_propagate(False)
-path = 'D:\Python\Python-main\src\package_klova9\Practice\Minesweeper\Flag-icon.jpg'
-img1 = Image.open(path)
+
 top_frame = Frame(
     root,
     bg='black',
