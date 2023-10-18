@@ -3,6 +3,7 @@ import random
 import settings
 import ctypes
 import sys
+from main import img1
 
 
 
