@@ -2,8 +2,10 @@ from tkinter import *
 from cell import Cell
 import settings
 import utils
+from PIL import Image, ImageTk
 
-
+path = 'D:\Python\Python-main\src\package_klova9\Practice\Minesweeper\Flag-icon.jpg'
+img1 = PhotoImage(file=path)
 root = Tk()
 
 root.configure(bg="black")
