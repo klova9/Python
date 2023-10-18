@@ -3,6 +3,8 @@ import random
 import settings
 import ctypes
 import sys
+from PIL import Image, ImageTk
+
 
 
 class Cell:
@@ -60,6 +62,8 @@ class Cell:
         return 'break'
             
     def right_click_actions(self, event):
+        path = 'D:\Python\Python-main\src\package_klova9\Practice\Minesweeper\Flag-icon.jpg'
+        img1 = PhotoImage(file=path)
         if not self.isMarked and not  self.is_open:
             self.cell_btn_object.config(image=img1)
             self.isMarked = True
