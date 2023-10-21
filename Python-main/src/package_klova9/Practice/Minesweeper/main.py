@@ -4,6 +4,7 @@ import settings
 import utils
 from PIL import Image, ImageTk
 
+# TODO: Format Window
 
 root = Tk()
 
