@@ -2,7 +2,7 @@ from tkinter import *
 from cell import Cell
 import settings
 import utils
-from PIL import Image, ImageTk
+#from PIL import Image, ImageTk
 
 # TODO: Format Window
 # TODO: Center labels
