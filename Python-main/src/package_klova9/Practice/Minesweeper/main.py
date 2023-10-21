@@ -5,6 +5,10 @@ import utils
 from PIL import Image, ImageTk
 
 # TODO: Format Window
+# TODO: Center labels
+# TODO: Add images to cells
+# TODO: Enlarge Fonts
+
 
 root = Tk()
 
