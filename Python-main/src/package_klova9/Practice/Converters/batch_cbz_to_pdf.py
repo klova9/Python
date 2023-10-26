@@ -3,7 +3,7 @@ from  pypdf import PdfMerger
 from PIL import Image
 
 directory = 'C:/Users/klova9/Documents/Gate/Gate - Volume 01/'
-pdf_path = 'C:/Users/klova9/Documents/Gate/Convert/'
+
 merger = PdfMerger()
 i=1
 
@@ -13,7 +13,7 @@ for images in os.listdir(directory):
         img_jpg = Image.open(img_path)
         img_pdf = img_jpg.save(img_path[:-4]+'.pdf')
 
-for pdf in os.listdir(pdf_path):
+for pdf in os.listdir(directory):
     if pdf.endswith('.pdf'):
         merger.append(pdf)
 
