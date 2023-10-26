@@ -14,6 +14,7 @@ def convert_file(directory, pdf_path):
     #else:
     
 paths = glob.glob('*.jpg')
-
+for path in paths:
+    convert_file(path, path[:-4] + '.pdf')
 #print(subdirs)
     #with Image.open()
