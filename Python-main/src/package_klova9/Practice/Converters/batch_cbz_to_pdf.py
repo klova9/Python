@@ -10,4 +10,5 @@ for images in os.listdir(directory):
     if images.endswith('.jpg'):
         img_path = os.path.join(directory, images)
         img_jpg = Image.open(img_path)
-        merger.append(img_jpg.save(img_path[:-4]+'.pdf'))
+        img_pdf = img_jpg.save(img_path[:-4]+'.pdf')
+        merger.append(img_pdf)
