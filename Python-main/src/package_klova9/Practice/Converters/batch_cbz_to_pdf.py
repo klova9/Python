@@ -13,6 +13,7 @@ def convert_file(directory, pdf_path):
                 img.save(pdf_path, "PDF", save_all=True)
     #else:
     
+paths = glob.glob('*.jpg')
 
 #print(subdirs)
     #with Image.open()
