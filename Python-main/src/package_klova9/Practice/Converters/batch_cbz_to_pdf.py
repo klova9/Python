@@ -2,7 +2,7 @@ import os
 from  pypdf import PdfMerger
 from PIL import Image
 
-directory = 'C:/Users/klova9/Documents/Gate/Gate - Volume 02/'
+directory = r'C:\Users\klova9\Documents\Claymore (v01-v27) (2006-2015) (Digital) (LostNerevarine-Empire)\Claymore, Vol. 1/'
 
 merger = PdfMerger()
 i=1
