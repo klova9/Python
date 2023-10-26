@@ -1,6 +1,6 @@
 import os
-directory = 'D:/Python/Python-main/src/package_klova9/Practice/Labs/'
+directory = 'C:\Users\klova9\Documents\Gate'
 for path, subdirs, files in os.walk(directory):
     for name in files:
-        if name.endswith(".log"):
+        if name.endswith(".jpg"):
             print(f'{path}/{name}')
