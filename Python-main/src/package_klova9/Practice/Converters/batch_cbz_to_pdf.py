@@ -18,5 +18,5 @@ for pdf in os.listdir(directory):
         pdf_path = os.path.join(directory, pdf)
         merger.append(pdf_path)
 
-merger.write('C:/Users/klova9/Documents/Gate/Gate - Volume 01/Converted.pdf')
+merger.write(os.path.join(directory, 'Converted.pdf'))
 merger.close()
