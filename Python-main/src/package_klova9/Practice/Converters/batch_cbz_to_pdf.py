@@ -6,8 +6,7 @@ subdirectories = [os.listdir(directory)]
     
 files = []
 for subdirectory in subdirectories:
-    for file in subdirectory:
-        
+    for file in os.listdir(subdirectory):
         files.append(file)
 
 print(files)
