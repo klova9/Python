@@ -1,12 +1,6 @@
 import os
-
 directory = 'D:/Python/Python-main/src/package_klova9/Practice/Labs/'
-subdirectories = [os.listdir(directory)]
-
-    
-files = []
-for subdirectory in subdirectories:
-    for file in os.listdir(subdirectories[subdirectory]):
-        files.append(file)
-
-print(files)
+for path, subdirs, files in os.walk(directory):
+    for name in files:
+        if name.endswith(".log"):
+            print(os.path.join(path, name))
