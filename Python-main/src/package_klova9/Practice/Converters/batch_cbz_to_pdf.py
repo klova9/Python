@@ -14,5 +14,8 @@ for images in os.listdir(directory):
         img_pdf = img_jpg.save(img_path[:-4]+'.pdf')
         pdfs.append(img_pdf)
         
+for pdf in pdfs:
+    merger.append(pdf)
+    
 merger.write('C:/Users/klova9/Documents/Gate/Gate - Volume 01/Converted.pdf')
 merger.close()
