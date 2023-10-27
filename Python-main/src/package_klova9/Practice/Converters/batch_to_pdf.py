@@ -3,11 +3,10 @@ from  pypdf import PdfMerger
 from PIL import Image
 
 directory = r'C:\Users\klova9\Documents'
+subdirectories = [d for d in os.listdir(directory)]
 
-
-
-subfolders = [d for d in os.listdir(directory)]
-for subfolder in subfolders:
+i=1
+def pdf_to_jpg(subdirectory):
     merger = PdfMerger()
     for images in os.listdir(directory):
         if images.endswith('.jpg'):
@@ -22,3 +21,4 @@ for subfolder in subfolders:
 
     merger.write(os.path.join(directory, 'Converted.pdf'))
     merger.close()
+    
