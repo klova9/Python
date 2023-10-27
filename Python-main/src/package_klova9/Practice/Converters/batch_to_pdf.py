@@ -2,13 +2,13 @@ import os
 from  pypdf import PdfMerger
 from PIL import Image
 
-directory = 'D:/Downloads/Highschool of the Dead - Full Color Edition [Yen Press]'
-subdirectorys = [x for x in os.listdir(directory)]
+root_directory = 'D:/Downloads/Highschool of the Dead - Full Color Edition [Yen Press]'
+subdirectorys = [x for x in os.listdir(root_directory)]
 
 merger = PdfMerger()
-i=1
+
 for x in subdirectorys:
-    directory = os.path.join(directory, x)
+    directory = os.path.join(root_directory, x)
     for images in os.listdir(directory):
         if images.endswith('.jpg'):
             img_path = os.path.join(directory, images)
@@ -21,6 +21,8 @@ for x in subdirectorys:
         if pdf.endswith('.pdf'):
             pdf_path = os.path.join(directory, pdf)
             merger.append(pdf_path)
-
 merger.write(os.path.join(directory, 'Converted.pdf'))
 merger.close()
+for dir, subdir, files in os.walk(directory):
+    if files != 'Converted.pdf':
+        os.remove(os.path.join(dir, subdir, files))
