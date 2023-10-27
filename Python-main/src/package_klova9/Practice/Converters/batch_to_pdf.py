@@ -23,6 +23,3 @@ for x in subdirectorys:
             merger.append(pdf_path)
 merger.write(os.path.join(directory, 'Converted.pdf'))
 merger.close()
-for dir, subdir, files in os.walk(directory):
-    if files != 'Converted.pdf':
-        os.remove(os.path.join(dir, subdir, files))
