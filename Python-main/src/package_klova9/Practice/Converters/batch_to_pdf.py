@@ -2,7 +2,7 @@ import os
 from  pypdf import PdfMerger
 from PIL import Image
 
-directory = 'D:\Downloads\Highschool of the Dead - Full Color Edition [Yen Press]\Highschool of the Dead - Full Color Edition v04 [Uasaha] (Yen Press)'
+directory = 'D:\Downloads\Highschool of the Dead - Full Color Edition [Yen Press]\Highschool of the Dead - Full Color Edition v06 [Uasaha] (Yen Press)'
 merger = PdfMerger()
 
 for images in os.listdir(directory):
