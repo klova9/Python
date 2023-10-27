@@ -22,3 +22,5 @@ def pdf_to_jpg(subdirectory):
     merger.write(os.path.join(directory, 'Converted.pdf'))
     merger.close()
     
+for subdirectory in subdirectories:
+    pdf_to_jpg(subdirectory)
