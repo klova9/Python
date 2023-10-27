@@ -8,7 +8,7 @@ subdirectorys = [x for x in os.listdir(directory)]
 merger = PdfMerger()
 i=1
 for subdir in subdirectorys:
-    directory = subdir
+    directory = os.path.join(directory, subdir)
     for images in os.listdir(directory):
         if images.endswith('.jpg'):
             img_path = os.path.join(directory, images)
