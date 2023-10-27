@@ -14,6 +14,8 @@ for subdir in subdirectorys:
             img_path = os.path.join(directory, images)
             img_jpg = Image.open(img_path)
             img_pdf = img_jpg.save(img_path[:-4]+'.pdf')
+    else:
+        pass
 
     for pdf in os.listdir(directory):
         if pdf.endswith('.pdf'):
