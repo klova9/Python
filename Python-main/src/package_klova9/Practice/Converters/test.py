@@ -5,8 +5,8 @@ subdirectorys = [x for x in os.listdir(root_directory)]
 
 for x in subdirectorys:
     for file in os.listdir(os.path.join(root_directory, x)):
-        if file != 'Converted.pdf' or file != 'Single pages':
+        if file != 'Converted.pdf':
             try:
-                os.remove(os.path.join(root_directory, x, file))
+                o
             except:
                 pass
