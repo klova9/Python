@@ -1,7 +1,8 @@
 import os
+from  pypdf import PdfMerger
+from PIL import Image
 
-path = r'D:\Downloads\Highschool of the Dead - Full Color Edition [Yen Press]'
-
-for subdir, dirs in os.walk(path):
-    for subdir in dir:
-        print(os.path.join(subdir))
+directory = r'D:\Downloads\Highschool of the Dead - Full Color Edition [Yen Press]'
+subdirectory = [x for x in os.listdir(directory)]
+for x in subdirectory:
+    print(x)
