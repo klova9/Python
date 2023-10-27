@@ -2,7 +2,7 @@ import os
 from  pypdf import PdfMerger
 from PIL import Image
 
-directory = r'D:\Downloads\[Pajeet] Battle Royale\Battle Royale, v15 (2005) [TokyoPop] [Manga-Sketchbook]'
+directory = r'D:\Downloads\Goblin Slayer v12 (2023) (Digital) (Mystic Vodka)'
 
 merger = PdfMerger()
 i=1
