@@ -2,7 +2,7 @@ import os
 from  pypdf import PdfMerger
 from PIL import Image
 
-directory = 'D:\Downloads\Highschool of the Dead - Full Color Edition [Yen Press]\Highschool of the Dead - Full Color Edition v07 [Uasaha] (Yen Press)'
+directory = 'D:\Downloads\Gate'
 merger = PdfMerger()
 for subdirs, dirs, files in os.walk(directory):
     for dir  in dirs:
@@ -14,7 +14,6 @@ for subdirs, dirs, files in os.walk(directory):
                         img_pdf = img_jpg.save(img_path[:-4]+'.pdf')
                 else:
                     pass
-
             for pdf in os.listdir(dir):
                 if pdf.endswith('.pdf'):
                     pdf_path = os.path.join(directory, dir, pdf)
