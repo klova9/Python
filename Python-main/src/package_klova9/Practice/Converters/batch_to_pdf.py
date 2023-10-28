@@ -1,6 +1,6 @@
 import os
 from  pypdf import PdfMerger
-import test
+
 from PIL import Image
 
 directory = 'D:\Downloads\Gate'
@@ -22,3 +22,4 @@ for subdirs, dirs, files in os.walk(directory):
             
 merger.write(os.path.join(directory, 'Converted.pdf'))
 merger.close()
+
