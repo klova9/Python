@@ -13,14 +13,17 @@ for subdirs, dirs, files in os.walk(directory):
                         img_path = os.path.join(directory, dir, images)
                         img_jpg = Image.open(img_path)
                         img_pdf = img_jpg.save(img_path[:-4]+'.pdf')
-                        print
+                        print(f'{img_path} converted')
                 else:
                     pass
             for pdf in os.listdir(os.path.join(directory, dir)):
                 if pdf.endswith('.pdf'):
                     pdf_path = os.path.join(directory, dir, pdf)
                     merger.append(pdf_path)
+                    print(f'{pdf_path} appended')   
             
+print('Merging PDFs...')
 merger.write(os.path.join(directory, 'Converted.pdf'))
+print('Done!')
 merger.close()
 
