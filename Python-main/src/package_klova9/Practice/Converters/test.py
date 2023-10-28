@@ -1,11 +1,8 @@
 import os
 
 directory = 'D:\Downloads\Gate'
-subdirs= os.listdir(directory)
-files = []
-for x in subdirs:
-    files.append(x)
-print(files)
+subdirs = os.listdir(directory)
+print(subdirs)
 #for subdirs, dirs, files in os.walk(directory):
 """if files or subdirs != 'Converted.pdf':
     for file in files:
