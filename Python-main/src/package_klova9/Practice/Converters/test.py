@@ -1,4 +1,5 @@
 import os
+import send2trash
 
 directory = 'D:\Downloads\Gate'
 subdirs = os.listdir(directory)
