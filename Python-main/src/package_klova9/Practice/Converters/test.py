@@ -10,6 +10,10 @@ for (subdirs, dirs, files) in os.walk(directory):
             path = os.path.join(subdirs, file)
             send2trash.send2trash(path)
             print(f'{path} deleted')
+        for dir in dirs:
+            path = os.path.join(subdirs, dir)
+            send2trash.send2trash(path)
+            print(f'{path} deleted')
     
 #for subdirs, dirs, files in os.walk(directory):
 """if files or subdirs != 'Converted.pdf':
