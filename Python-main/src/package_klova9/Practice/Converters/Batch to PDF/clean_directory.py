@@ -1,7 +1,7 @@
 import os
 import send2trash
-import run
-directory = run.directory
+from run import directory
+directory = directory
 subdirs = os.listdir(directory)
 
 for (subdirs, dirs, files) in os.walk(directory):
