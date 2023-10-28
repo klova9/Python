@@ -5,7 +5,7 @@ directory = 'D:\Downloads\Gate'
 subdirs = os.listdir(directory)
 
 for (subdirs, dirs, files) in os.walk(directory):
-    if (dirs, files) != 'Converted.pdf':
+    if os.path.isfile(os.path.join(directory, 'Converted.pdf')):
         for file in files:
             path = os.path.join(subdirs, file)
             send2trash.send2trash(path)
