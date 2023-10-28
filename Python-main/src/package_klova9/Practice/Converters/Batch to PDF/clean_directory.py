@@ -1,6 +1,6 @@
 import os
 import send2trash
-from run import directory
+from batch_to_pdf import directory
 directory = directory
 subdirs = os.listdir(directory)
 
