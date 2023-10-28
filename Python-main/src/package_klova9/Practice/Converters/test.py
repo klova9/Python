@@ -3,6 +3,9 @@ import os
 directory = 'D:\Downloads\Gate'
 subdirs = os.listdir(directory)
 print(subdirs)
+res = []
+for (subdirs, dirs, files) in os.walk(directory):
+    print(res)
 #for subdirs, dirs, files in os.walk(directory):
 """if files or subdirs != 'Converted.pdf':
     for file in files:
