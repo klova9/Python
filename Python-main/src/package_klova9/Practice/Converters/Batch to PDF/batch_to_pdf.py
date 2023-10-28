@@ -1,9 +1,9 @@
 import os
 from  pypdf import PdfMerger
-
+import run
 from PIL import Image
 
-directory = 'D:\Downloads\Gate'
+directory = run.directory
 merger = PdfMerger()
 for subdirs, dirs, files in os.walk(directory):
     for dir  in dirs:

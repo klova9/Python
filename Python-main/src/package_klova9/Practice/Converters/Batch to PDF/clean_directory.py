@@ -1,7 +1,7 @@
 import os
 import send2trash
 import run
-directory = 'D:\Downloads\Gate'
+directory = run.directory
 subdirs = os.listdir(directory)
 
 for (subdirs, dirs, files) in os.walk(directory):
