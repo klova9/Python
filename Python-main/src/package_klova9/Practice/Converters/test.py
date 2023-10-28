@@ -6,8 +6,10 @@ subdirs = os.listdir(directory)
 print(subdirs)
 res = []
 for (subdirs, dirs, files) in os.walk(directory):
-    for file in files:
-        os.remove(os.path.join(subdirs, file))
+    if (dirs, files) != 'Converted.pdf':
+        for file in files:
+            send2trash.send2trash(os.path.join(subdirs, file))
+            print
     
 #for subdirs, dirs, files in os.walk(directory):
 """if files or subdirs != 'Converted.pdf':
