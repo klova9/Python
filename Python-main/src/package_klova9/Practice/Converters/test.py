@@ -1,7 +1,7 @@
 import os
 import send2trash
-from batch_to_pdf import directory
-directory = directory
+
+directory = 'D:\Downloads\Gate'
 subdirs = os.listdir(directory)
 
 for (subdirs, dirs, files) in os.walk(directory):
@@ -14,8 +14,3 @@ for (subdirs, dirs, files) in os.walk(directory):
             path = os.path.join(subdirs, dir)
             send2trash.send2trash(path)
             print(f'{path} deleted')
-    
-#for subdirs, dirs, files in os.walk(directory):
-"""if files or subdirs != 'Converted.pdf':
-    for file in files:
-        os.remove(os.path.join(file))"""
