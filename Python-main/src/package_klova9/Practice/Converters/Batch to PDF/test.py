@@ -1,12 +1,11 @@
 import zipfile
 import os
 directory = 'd:\Downloads\Kaifuku Jutsushi no Yarinaoshi'
-def un_zipFiles(directory):
-    files=os.listdir(directory)
+
+subdirs = [x for x in os.listdir(directory)]
+for (subdirs, dirs, files) in os.walk(directory):
     for file in files:
         if file.endswith('.cbz'):
-            filePath=directory+'/'+file
-            zip_file = zipfile.ZipFile(filePath)
-            for names in zip_file.namelist():
-                zip_file.extract(names,directory)
-            zip_file.close() 
+            path = os.path.join(subdirs, file)
+            extracted = zipfile.ZipFile(path).extractall(directory)
+            print(f'{path} extracted')
