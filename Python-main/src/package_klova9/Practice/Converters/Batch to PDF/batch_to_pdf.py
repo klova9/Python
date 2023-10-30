@@ -3,7 +3,6 @@ from  pypdf import PdfMerger
 from PIL import Image
 import zipfile
 
-directory = 'D:\Downloads\[Pajeet] Battle Royale'
 merger = PdfMerger()
 def convert(directory):
     for subdirs, dirs, files in os.walk(directory):
@@ -22,9 +21,8 @@ def convert(directory):
                         pdf_path = os.path.join(directory, dir, pdf)
                         merger.append(pdf_path)
                         print(f'{pdf_path} appended')   
-            
-print('Merging PDFs...')
-merger.write(os.path.join(directory, 'Converted.pdf'))
-print('Done!')
-merger.close()
+    print('Merging PDFs...')
+    merger.write(os.path.join(directory, 'Converted.pdf'))
+    print('Done!')
+    merger.close()
 
