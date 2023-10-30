@@ -6,11 +6,6 @@ import zipfile
 directory = 'D:\Downloads\Kaifuku Jutsushi no Yarinaoshi'
 merger = PdfMerger()
 for subdirs, dirs, files in os.walk(directory):
-    for file in files:
-        if file.endswith('.cbz'):
-            path = os.path.join(subdirs, file)
-            extracted = zipfile.ZipFile(path).extractall(directory)
-            print(f'{path} extracted')
     for dir  in dirs:
         if dir != 'Single pages':
             for images in os.listdir(os.path.join(directory, dir)):
