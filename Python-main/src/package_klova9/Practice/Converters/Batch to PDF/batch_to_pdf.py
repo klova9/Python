@@ -6,9 +6,10 @@ import zipfile
 directory = 'D:\Downloads\Claymore (v01-v27) (2006-2015) (Digital) (LostNerevarine-Empire)'
 merger = PdfMerger()
 for subdir in os.listdir(directory):
-    if subdir[:-4] == '.cbz':
-            zip = zipfile(os.path.join(directory, dir))
-            zip.extractall()
+    if subdir.endswith('.cbz'):
+        print(f'Extracting {subdir}...')
+        zip = zipfile(os.path.join(directory, dir))
+        zip.extractall()
 for subdirs, dirs, files in os.walk(directory):
     for dir  in dirs:
     
