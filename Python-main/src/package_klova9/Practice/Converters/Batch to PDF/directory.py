@@ -1,0 +1,1 @@
+directory = 'd:\Downloads\Claymore (v01-v27) (2006-2015) (Digital) (LostNerevarine-Empire)'
