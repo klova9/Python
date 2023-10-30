@@ -3,7 +3,7 @@ from  pypdf import PdfMerger
 from PIL import Image
 import zipfile
 
-directory = 'D:\Downloads\Kaifuku Jutsushi no Yarinaoshi'
+directory = 'D:\Downloads\[Pajeet] Battle Royale'
 merger = PdfMerger()
 for subdirs, dirs, files in os.walk(directory):
     for dir  in dirs:
