@@ -1,11 +1,16 @@
 import os
 from  pypdf import PdfMerger
 from PIL import Image
+import zipfile
 
 directory = 'D:\Downloads\Claymore (v01-v27) (2006-2015) (Digital) (LostNerevarine-Empire)'
 merger = PdfMerger()
 for subdirs, dirs, files in os.walk(directory):
     for dir  in dirs:
+        if dir[:-4] == '.cbz':
+            with zipfile.ZipFile(os.path.join(directory, dir), 'r'):
+                zip(directory)
+            
         if dir != 'Single pages':
             for images in os.listdir(os.path.join(directory, dir)):
                 if images.endswith('.jpg'):
