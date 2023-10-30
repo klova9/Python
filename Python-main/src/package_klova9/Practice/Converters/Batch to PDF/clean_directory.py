@@ -1,5 +1,4 @@
 import os
-from batch_to_pdf import directory
 import send2trash
 
 def clean_directory(directory):
