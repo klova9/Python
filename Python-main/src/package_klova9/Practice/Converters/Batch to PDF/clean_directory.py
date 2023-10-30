@@ -1,7 +1,8 @@
 import os
+from batch_to_pdf import directory
 import send2trash
 
-directory = 'D:\Downloads\Gate'
+directory = directory
 subdirs = os.listdir(directory)
 
 for (subdirs, dirs, files) in os.walk(directory):
