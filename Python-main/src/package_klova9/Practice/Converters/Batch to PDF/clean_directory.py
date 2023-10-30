@@ -2,9 +2,8 @@ import os
 from batch_to_pdf import directory
 import send2trash
 
-directory = directory
-subdirs = os.listdir(directory)
-def clean_directory(directory, subdirs):
+def clean_directory(directory):
+    subdirs = os.listdir(directory)
     for (subdirs, dirs, files) in os.walk(directory):
             for file in files:
                 path = os.path.join(subdirs, file)
