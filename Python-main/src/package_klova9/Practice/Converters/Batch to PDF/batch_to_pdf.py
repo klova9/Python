@@ -5,14 +5,13 @@ import zipfile
 
 directory = 'D:\Downloads\Claymore (v01-v27) (2006-2015) (Digital) (LostNerevarine-Empire)'
 merger = PdfMerger()
-for subdir in os.listdir(directory):
-    if subdir.endswith('.cbz'):
-        print(f'Extracting {subdir}...')
-        zip = zipfile(os.path.join(directory, dir))
-        zip.extractall()
 for subdirs, dirs, files in os.walk(directory):
     for dir  in dirs:
-    
+        if dir.endswith('.cbz'):
+            print(f'Extracting {dir}...')
+            zip = zipfile(os.path.join(directory, dir))
+            zip.extractall()
+            pass
         if dir != 'Single pages':
             for images in os.listdir(os.path.join(directory, dir)):
                 if images.endswith('.jpg'):
