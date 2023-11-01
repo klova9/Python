@@ -25,4 +25,3 @@ def convert(directory):
     merger.write(os.path.join(directory, 'Converted.pdf'))
     print('Done!')
     merger.close()
-
