@@ -1,7 +1,7 @@
 import os
 import send2trash
 
-def clean_directory(directory) -> None:
+def clean_directory(directory):
     subdirs = os.listdir(directory)
     for (subdirs, dirs, files) in os.walk(directory):
             for file in files:
