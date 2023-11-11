@@ -1,7 +1,6 @@
 import os
 from  pypdf import PdfMerger
 from PIL import Image
-import zipfile
 
 merger = PdfMerger()
 def convert(directory):
@@ -12,7 +11,7 @@ def convert(directory):
                     if images.endswith('.jpg'):
                             img_path = os.path.join(directory, dir, images)
                             img_jpg = Image.open(img_path)
-                            img_pdf = img_jpg.save(img_path[:-4]+'.pdf')
+                            img_jpg.save(img_path[:-4]+'.pdf')
                             print(f'{img_path} converted')
                     else:
                         pass
