@@ -5,7 +5,8 @@ def extract(directory):
     subdirs = os.listdir(directory)
     for (subdirs, dirs, files) in os.walk(directory):
         for file in files:
-            if file.ends ('.cbz'):
+            if file.end ('.cbz'):
                 path = os.path.join(subdirs, file)
                 extracted = zipfile.ZipFile(path).extractall(directory)
                 print(f'{path} extracted')
+    str(file).endswith
