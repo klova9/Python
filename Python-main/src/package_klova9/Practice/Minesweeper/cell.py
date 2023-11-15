@@ -53,7 +53,7 @@ class Cell:
                for cell_obj in self.surrounded_cells:
                    cell_obj.show_cell() 
             self.show_cell()
-        self.cell_btn_object.config(relief='flat')
+        self.cell_btn_object.config(relief='sunken')
         return 'break'
             
     def right_click_actions(self, event):
