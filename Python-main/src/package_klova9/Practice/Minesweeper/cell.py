@@ -5,8 +5,6 @@ import ctypes
 import sys
 #from PIL import Image, ImageTk
 
-
-
 class Cell:
     all = []
     cell_count_label = None
@@ -35,8 +33,6 @@ class Cell:
         btn.bind('<Button-3>', self.right_click_actions ) # Right Click=
         self.cell_btn_object = btn
         
-           
-    
     @staticmethod
     def create_cell_count_label(location):
         label = Label(
@@ -47,7 +43,6 @@ class Cell:
             bg='black',
             fg='red'
         )
-     
         Cell.cell_count_label = label
 
     def left_click_actions(self, event):
@@ -62,10 +57,8 @@ class Cell:
         return 'break'
             
     def right_click_actions(self, event):
-        path = 'D:\Python\Python-main\src\package_klova9\Practice\Minesweeper\Flag-icon.jpg'
-        img1 = PhotoImage(file=path)
         if not self.isMarked and not  self.is_open:
-            self.cell_btn_object.config(image=img1)
+            self.cell_btn_object.config(bg='yellow')
             self.isMarked = True
         else:
             self.cell_btn_object.config(bg='SystemButtonFace')
