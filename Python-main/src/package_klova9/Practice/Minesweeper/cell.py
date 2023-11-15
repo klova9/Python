@@ -1,9 +1,9 @@
-from tkinter import *
+from tkinter import Button, Label
 import random
 import settings
 import ctypes
 import sys
-from PIL import Image, ImageTk
+#from PIL import Image, ImageTk
 
 
 
