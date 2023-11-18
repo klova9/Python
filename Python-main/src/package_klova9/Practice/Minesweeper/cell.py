@@ -10,6 +10,7 @@ class Cell:
     cell_count_label = None
     cell_count = settings.CELL_COUNT
     print(f'Cell count: {cell_count}')
+    
     def __init__(self,x, y, is_mine=False):
         self.is_mine = is_mine
         self.is_open = False
@@ -17,8 +18,6 @@ class Cell:
         self.isMarked = False
         self.x = x
         self.y = y
-
-        # Append the object to the Cell.all list
         Cell.all.append(self)
     
     def create_btn_object(self, location):
@@ -29,8 +28,8 @@ class Cell:
             relief='raised',
             borderwidth=8
         )
-        btn.bind('<Button-1>', self.left_click_actions ) # Left Click
-        btn.bind('<Button-3>', self.right_click_actions ) # Right Click=
+        btn.bind('<Button-1>', self.left_click_actions)
+        btn.bind('<Button-3>', self.right_click_actions)
         self.cell_btn_object = btn
         
     @staticmethod
