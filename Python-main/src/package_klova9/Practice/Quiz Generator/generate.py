@@ -15,5 +15,5 @@ for x in range(n):
     else:
         print('Incorrect')
     time.sleep(1)
-print('You got ' + str(m) + ' out of ' + str(n))
+print('You got ' + str(m) + ' out of ' + str(n) + ' correct')
     
