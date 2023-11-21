@@ -1,5 +1,5 @@
 import json
-from os import wait
+import time
 import random
 
 quiz = json.load(open('Python-main\src\package_klova9\Practice\Quiz Generator\questions.json'))
@@ -12,6 +12,6 @@ for x in range(2):
         print('Correct')
     else:
         print('Incorrect')
-    wait(2)
+    time.sleep(1)
     print('Next Question')
-    wait(2)
+    time.sleep(1)
