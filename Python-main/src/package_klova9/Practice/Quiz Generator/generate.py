@@ -13,7 +13,5 @@ for x in range(n):
     else:
         print('Incorrect')
     time.sleep(1)
-for x in range(n-1):
-    print('Next Question')
-    time.sleep(1)
+33
     
