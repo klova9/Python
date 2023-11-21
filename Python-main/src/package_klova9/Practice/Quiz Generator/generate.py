@@ -13,7 +13,7 @@ for x in range(2):
     else:
         print('Incorrect')
     time.sleep(1)
-    if x < 2:
+    if x != 2:
         print('Next Question')
         time.sleep(1)
     
