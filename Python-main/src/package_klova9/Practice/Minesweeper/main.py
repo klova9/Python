@@ -1,15 +1,21 @@
-from tkinter import *
-from cells import Cell
+from tkinter import Tk, Frame, Label
+from cell import Cell
 import settings
 import utils
+#from PIL import Image, ImageTk
 
+# TODO: Format Window
+# TODO: Center labels
+# TODO: Add images to cells
+# TODO: Enlarge Fonts
 
 root = Tk()
-# Override the settings of the window
+
 root.configure(bg="black")
 root.geometry(f'{settings.WIDTH}x{settings.HEIGHT}')
 root.title("Minesweeper Game")
 root.resizable(False, False)
+root.pack_propagate(False)
 
 top_frame = Frame(
     root,
@@ -19,6 +25,14 @@ top_frame = Frame(
 )
 top_frame.place(x=0, y=0)
 
+game_title = Label(
+    top_frame,
+    text="Minesweeper",
+    bg='black',
+    fg='white',
+    font='gostcom 24 bold'
+) 
+game_title.place(x=utils.width_prct(25), y=0)
 left_frame = Frame(
     root,
     bg='black',
@@ -33,6 +47,7 @@ center_frame = Frame(
     width=utils.width_prct(75),
     height=utils.height_prct(75)
 )
+
 center_frame.place(
     x=utils.width_prct(25),
     y=utils.height_prct(25),
@@ -43,11 +58,11 @@ for x in range(settings.GRID_SIZE):
         c = Cell(x, y)
         c.create_btn_object(center_frame)
         c.cell_btn_object.grid(
-            column=x, row=y
+            column=x, row=y, 
         )
-
+        
+Cell.create_cell_count_label(left_frame)
+Cell.cell_count_label.place(x=0, y=0)
 Cell.randomize_mines()
 
-
-# Run the window
 root.mainloop()
