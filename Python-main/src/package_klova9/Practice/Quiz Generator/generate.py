@@ -10,8 +10,11 @@ root.title("Pop Quiz")
 root.resizable(False, False)
 root.pack_propagate(False)
 
-top_frame = tkinter.Frame(root)
-top_frame.place()
+top_frame = tkinter.Frame(
+    root,
+    width=300,
+    height=50,)
+top_frame.place(x=0, y=0)
 n = 3
 m = 0
 for x in range(n):
