@@ -39,12 +39,12 @@ for x in range(n):
     else:
         print('Incorrect')
     time.sleep(1)
-    print('\n')
 
 label = Label(
     top_frame,
-    fg='black',
-    text=question,
+    bg='red',
+    fg='green',
+    text='question',
     )
-label.place(x=0, y=HEIGHT * 0.25)
+label.place(x=WIDTH * 0.25, y=HEIGHT * 0.25)
 root.mainloop()
