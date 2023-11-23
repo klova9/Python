@@ -48,6 +48,6 @@ label = Label(
     width=12,
     height=4,
     )
-label.place(x=0, y=0)
+label.pack()
 root.update()
 root.mainloop()
