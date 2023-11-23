@@ -30,6 +30,10 @@ for x in range(n):
     time.sleep(1)
     print('\n')
 
-label = tkinter.Label(frame, question)
-label.place(frame)
+label = tkinter.Label(
+    top_frame,
+    fg='black',
+    text=question,
+    )
+label.place(x=0, y=0)
 root.mainloop()
