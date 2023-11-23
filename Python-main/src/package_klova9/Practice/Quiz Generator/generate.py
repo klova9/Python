@@ -49,4 +49,5 @@ label = Label(
     height=4,
     )
 label.place(x=0, y=0)
+root.update()
 root.mainloop()
