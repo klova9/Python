@@ -5,8 +5,13 @@ import tkinter
 
 quiz = json.load(open('Python-main\src\package_klova9\Practice\Quiz Generator\questions.json'))
 root = tkinter.Tk()
+root.geometry("300x300")
+root.title("Pop Quiz")
+root.resizable(False, False)
+root.pack_propagate(False)
+
 frame = tkinter.Frame(root)
-frame.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
+frame.place()
 n = 3
 m = 0
 for x in range(n):
