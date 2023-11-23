@@ -45,6 +45,8 @@ label = Label(
     bg='red',
     fg='green',
     text='question',
+    width=12,
+    height=4,
     )
 label.place(x=WIDTH * 0.25, y=HEIGHT * 0.25)
 root.mainloop()
