@@ -1,20 +1,31 @@
 import json
 import time
 import random
-import tkinter
+from tkinter import *
 
 quiz = json.load(open('Python-main\src\package_klova9\Practice\Quiz Generator\questions.json'))
-root = tkinter.Tk()
-root.geometry("300x300")
+root = Tk()
+HEIGHT = 300
+WIDTH = 300
+root.geometry(f'{WIDTH}x{HEIGHT}')
 root.title("Pop Quiz")
 root.resizable(False, False)
 root.pack_propagate(False)
 
-top_frame = tkinter.Frame(
+top_frame = Frame(
     root,
-    width=300,
-    height=50,)
+    width=WIDTH ,
+    height=HEIGHT * 0.25
+    )
 top_frame.place(x=0, y=0)
+center_frame = Frame(
+    root,
+    bg='black',
+    width= WIDTH,
+    height=HEIGHT * 0.75
+)
+
+center_frame.place(x=WIDTH * 0.25, y=HEIGHT * 0.25)
 n = 3
 m = 0
 for x in range(n):
@@ -30,10 +41,10 @@ for x in range(n):
     time.sleep(1)
     print('\n')
 
-label = tkinter.Label(
+label = Label(
     top_frame,
     fg='black',
     text=question,
     )
-label.place(x=0, y=50)
+label.place(x=0, y=HEIGHT * 0.25)
 root.mainloop()
