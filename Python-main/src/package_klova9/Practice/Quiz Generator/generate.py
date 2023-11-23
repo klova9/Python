@@ -35,5 +35,5 @@ label = tkinter.Label(
     fg='black',
     text=question,
     )
-label.place(x=0, y=0)
+label.place(x=0, y=50)
 root.mainloop()
