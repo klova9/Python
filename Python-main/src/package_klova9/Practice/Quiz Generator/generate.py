@@ -23,5 +23,5 @@ for x in range(n):
     print('\n')
 
 label = tkinter.Label(frame, question)
-label.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
+label.place(frame)
 root.mainloop()
