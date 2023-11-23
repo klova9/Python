@@ -15,4 +15,5 @@ for x in range(n):
     else:
         print('Incorrect')
     time.sleep(1)
-print(f'Score: {m}/{n}')
+
+print(f'\n\nScore: {m}/{n}')
