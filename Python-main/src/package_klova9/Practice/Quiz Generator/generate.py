@@ -48,5 +48,5 @@ label = Label(
     width=12,
     height=4,
     )
-label.place(x=WIDTH * 0.25, y=HEIGHT * 0.25)
+label.place(x=0, y=0)
 root.mainloop()
