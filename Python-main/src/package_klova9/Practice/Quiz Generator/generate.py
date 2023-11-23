@@ -4,28 +4,7 @@ import random
 from tkinter import *
 
 quiz = json.load(open('Python-main\src\package_klova9\Practice\Quiz Generator\questions.json'))
-root = Tk()
-HEIGHT = 300
-WIDTH = 300
-root.geometry(f'{WIDTH}x{HEIGHT}')
-root.title("Pop Quiz")
-root.resizable(False, False)
-root.pack_propagate(False)
 
-top_frame = Frame(
-    root,
-    width=WIDTH,
-    height=HEIGHT * 0.25
-    )
-top_frame.place(x=0, y=0)
-center_frame = Frame(
-    root,
-    bg='black',
-    width= WIDTH,
-    height=HEIGHT * 0.75
-)
-
-center_frame.place(x=0, y=HEIGHT * 0.25)
 n = 3
 m = 0
 for x in range(n):
@@ -48,6 +27,3 @@ label = Label(
     width=12,
     height=4,
     )
-label.pack()
-root.update()
-root.mainloop()
