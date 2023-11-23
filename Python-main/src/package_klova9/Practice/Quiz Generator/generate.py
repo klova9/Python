@@ -25,7 +25,7 @@ center_frame = Frame(
     height=HEIGHT * 0.75
 )
 
-center_frame.place(x=WIDTH * 0.25, y=HEIGHT * 0.75)
+center_frame.place(x=0, y=HEIGHT * 0.25)
 n = 3
 m = 0
 for x in range(n):
