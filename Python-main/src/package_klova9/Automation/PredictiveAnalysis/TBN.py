@@ -7,7 +7,7 @@ title = data['title']
 type = data['type']
 for i in range(len(title)):
     if type[i] == 'TV Show':
-        new =data.drop(i, inplace=True)
+        new =data.drop(index=i, inplace=True, axis=0)
         
 print(new.head(10))
     
