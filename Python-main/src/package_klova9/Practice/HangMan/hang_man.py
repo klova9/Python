@@ -1,7 +1,6 @@
 import random as ran
 import json
-import regex as re
-import keyboard
+import re
 
 # WIP
 
