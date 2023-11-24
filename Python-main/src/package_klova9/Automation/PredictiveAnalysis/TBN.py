@@ -7,7 +7,7 @@ title = data['title']
 type = data['type']
 for i in range(len(title)):
     if type[i] != 'Movie':
-        data.drop(i, inplace=True)
+        new =data.drop(i, inplace=True)
         
-print(type.head(10))
+print(new.head(10))
     
