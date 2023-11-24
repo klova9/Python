@@ -5,5 +5,9 @@ data = pd.read_csv(r'Python-main\src\package_klova9\Automation\PredictiveAnalysi
 print(data.head(10))
 title = data['title']
 type = data['type']
-print(type)
+for i in range(len(title)):
+    if type[i] == 'TV Show':
+        new =data.drop(i, inplace=True)
+        
+print(new.head(10))
     
