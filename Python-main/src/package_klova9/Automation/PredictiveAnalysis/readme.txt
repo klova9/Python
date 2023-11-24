@@ -1,1 +1,1 @@
-Analyse 
+Analyze Netflix movie genre compared to viewership. Predict genre/viewership given viewership/genre 
