@@ -1,4 +1,4 @@
-import math
+#import math
 from tabulate import tabulate
 import json
 #This code calculates the cost of using a product based on the area per unit, cost per unit, and the dimensions of the product. It loads data from a JSON file containing information about manufacturers and their products, then calculates the number of units needed to use the product based on the total area of a room. Finally, it outputs a table with the manufacturer name, product name, area per unit, cost per unit, total number of units required, and the total cost.
