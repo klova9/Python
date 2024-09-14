@@ -1,0 +1,5 @@
+| Manufacturer   | Product       | Volume Per Unit   | Cost Per Unit   | Total Units   | Total Cost   |
+|----------------|---------------|-------------------|-----------------|---------------|--------------|
+| Lowes          | All-Purpose   | 0.50              | 5.11            | 134           | 684.74       |
+| Menards        | Multi-Purpose | 0.50              | 4.26            | 134           | 570.84       |
+| Home Depot     | Quikrete      | 0.50              | 5.64            | 134           | 755.76       |

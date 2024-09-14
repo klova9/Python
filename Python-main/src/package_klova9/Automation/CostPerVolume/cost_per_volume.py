@@ -5,9 +5,9 @@ import json
 import math
 from tabulate import tabulate
 
-x = 2 # Diameter of inner circle
-y = 4 # Diameter of outer circle
-z = 0.5 # Height of cylinder
+x = 4.375 # Diameter of inner circle (ft)
+y = 13.75 # Diameter of outer circle (ft)
+z = 0.5 # Height of cylinder (ft)
 
 # Volume of outer cylinder
 v1 = math.pi * math.pow(y/2, 2) * z
@@ -15,8 +15,10 @@ v1 = math.pi * math.pow(y/2, 2) * z
 v2 = math.pi * math.pow(x/2, 2) * z
 # Volume of toroid
 v = v1 - v2
+print(math.ceil(v))
 
 # Define table structure
+manufacturer = []
 product = []
 volume_per_unit = []
 cost_per_unit = []
@@ -24,9 +26,10 @@ units = []
 cost = []
 
 # Load data from JSON file and append data to table
-with open('Python-main\CostPerVolume\data.json', 'r') as f:
+with open('D:\Python\Python-main\src\package_klova9\Automation\CostPerVolume\data.json', 'r') as f:
     data = json.load(f)
-    for item in data['description']:    
+    for item in data['manufacterure']:    
+        manufacturer.append(item['name'])
         product.append(item['product'])
         volume_per_unit.append(item['volume_per_unit'])
         cost_per_unit.append(item['cost_per_unit'])
@@ -37,8 +40,9 @@ for i, c in enumerate(volume_per_unit):
 for i, c in enumerate(cost_per_unit):
     cost.append(c * units[i])
 
+# Construct table with calculated data and write to text file
+table = zip(manufacturer, product, volume_per_unit, cost_per_unit, units, cost) 
+with open('\Python\Python-main\src\package_klova9\Automation\CostPerVolume\cost_per_volume.txt', 'w') as f:
+    f.write(tabulate(table, headers=['Manufacturer', 'Product', 'Volume Per Unit', 'Cost Per Unit', 'Total Units', 'Total Cost'], tablefmt='github', numalign='left', floatfmt=".2f"))
 
-table = zip(product, volume_per_unit, cost_per_unit, units, cost) 
-with open('Python-main\Practice\Int\cost_per_sqaure.txt', 'w') as f:
-    f.write(tabulate(table, headers=['Manufacturer', 'Product', 'Type', 'Area Per Unit', 'Cost Per Unit', 'Total Units', 'Total Cost'], tablefmt='github', numalign='left', floatfmt=".2f"))
-   
+print("File 'cost_per_volume.txt' has been created")
