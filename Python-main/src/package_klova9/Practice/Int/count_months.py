@@ -3,7 +3,7 @@
 
 from datetime import datetime
 
-date1 = input('Enter the first date in the format MM-DD-YYYY: ')
+date1 = input('Enter the first date in the format YYYY-MM-DD: ')
 date2 = input('Enter the second date in the format MM-DD-YYYY: ')
 
 def count_months(date1, date2):
